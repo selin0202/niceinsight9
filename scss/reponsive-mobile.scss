@@ -1,0 +1,459 @@
+//Import Loacla SCSS Files
+@import "reset.scss", "variables", "fonts";
+@media (max-width: 767px) {
+  /* ############### Common CSS ############### */
+  section:not(.front-slider) {
+    padding: 35px 10px;
+  }
+  [class*=inner] {
+    width: 100%;
+  }
+  .front-header {
+    h2 {
+      font-size: 15px;
+    }
+    a {
+      font-size: 12px;
+    }
+  }
+  /* Header */
+  header {
+    .header-inner {
+      padding: 0 10px;
+      .logo-search {
+        .logo {
+          img {
+            width: 30px;
+          }
+        }
+        .login-register-buttons {
+          margin-left: auto;
+          button {
+            font-size: 11px;
+            border: 1px solid $dim-gray;
+            border-radius: 5px;
+            padding: 6px 5px;
+            background-color: transparent;
+            &.btn-login {}
+            &.btn-register {
+              background-color: $forestgreen;
+              color: $white;
+              border: transparent;
+            }
+          }
+        }
+        .search {
+          display: none;
+        }
+      }
+      .gnb {
+        .special-navi {
+          white-space: nowrap;
+          overflow-y: hidden;
+          & a:first-child {
+            content: '';
+          }
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+        .triger {
+          &:after {
+            content: '';
+            display: none;
+          }
+          &:before {
+            content: '';
+            background: url('/images/icon-category-search.png');
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+    .mega-navi {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 300px;
+      height: 100%;
+      padding-top: 50px;
+      .search-mobile {
+        width: 280px;
+        margin: auto;
+        display: block;
+      }
+      .mega-navi-inner {
+        flex-direction: column;
+        width: 100%;
+        .mega-navi-item {
+          &:last-child b {
+            border-bottom: none;
+          }
+          b {
+            border-bottom: 1px solid $dim-black;
+            display: block;
+            padding: 5px 15px;
+            color: $dark-gray;
+            pointer-events: auto;
+            &:after {
+              content: '\F4FE';
+              font-family: $bs-font;
+              float: right;
+              color: $silver-black;
+              font-size: 18px;
+            }
+            &.active {
+              color: $white;
+            }
+            &.active:after {
+              content: '\F2EA';
+              color: $white;
+            }
+          }
+          .mega-navi-item-wrap {
+            display: none;
+            padding: 10px 15px;
+          }
+        }
+      }
+      .btn-mega-navi-close {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        border: none;
+        background-color: transparent;
+        font-size: 1.3em;
+        color: $white;
+        display: block;
+      }
+    }
+  }
+  /* Footer */
+  footer {
+    padding: 30px;
+    .footer-inner {
+      .lnb-wrap {
+        gap: 50px;
+        flex-direction: column;
+        padding: 0;
+        border-bottom: none;
+        .footer-slogan {
+          text-align: center;
+        }
+        .lnb {
+          flex-direction: column;
+          .link-item {
+            .link-item-title {
+              border-bottom: 1px solid #777777;
+              line-height: 40px;
+              pointer-events: auto;
+              cursor: pointer;
+              &::after {
+                content: '\F282';
+                font-family: $bs-font;
+                display: inline-block;
+                float: right;
+              }
+            }
+            .link-item-title.active {
+              color: $white;
+              &:after {
+                content: '\F286';
+                font-family: $bs-font;
+                margin-left: 5px;
+                vertical-align: middle;
+              }
+            }
+            .link-item-content {
+              line-height: 25px;
+              display: none;
+            }
+          }
+        }
+      }
+      .copyright-wrap {
+        flex-direction: column;
+        text-align: center;
+        line-height: 30px;
+        address {
+          .adress-info {
+            display: none;
+          }
+          p {
+            margin-top: 0;
+          }
+          b {
+            cursor: pointer;
+            pointer-events: auto;
+            &:after {
+              content: '\F282';
+              font-family: $bs-font;
+              margin-left: 5px;
+              vertical-align: middle;
+            }
+          }
+          b.active {
+            color: $white;
+            &:after {
+              content: '\F286';
+              font-family: $bs-font;
+              margin-left: 5px;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* Section : Front Slider */
+  .front-slider {
+    .front-slider-items {
+      .front-slider-item {
+        .front-slider-inner {
+          flex-direction: column;
+          width: 100%;
+          height: auto;
+          overflow-y: hidden;
+          padding: 0 5px;
+          .desc {
+            margin-top: 20px;
+            b {
+            }
+            h1 {
+              font-size: 20px;
+              margin: 5px 0;
+            }
+          }
+          .pic {
+            img {
+              height: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* Section : Category Shortcut */
+  .category-shortcut {
+    .category-shortcut-inner {
+      .category-shortcut-itmes {
+        .category-shortcut-item {
+          flex-basis: 30%;
+          box-shadow: none;
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+/* Section : Focus Class */
+.focus-class {
+  .focus-class-inner {
+    .focus-class-content {
+      overflow: hidden;
+      @at-root .front-class-items {
+        width: 520px;
+        .focus-class-item {
+          .thum {
+            height: 120px;
+          }
+          @at-root .overview {
+            h4 {
+              font-size: 14px;
+              overflow: hidden;
+              display: -webkit-box; 
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+            }
+            .class-price {
+              transform: scale(0.8);
+              transform-origin: left;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+  
+/* Section : Best Class */
+.best-class {
+  .best-class-inner {
+    .best-class-content {
+      .best-class-wrap {
+        flex-direction: column;
+        .invite-banner {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .best-class-items-outer {
+          .best-class-items {
+            flex-direction: column;
+            gap: 0;
+            .best-class-item {
+              margin-bottom: 10px;
+              cursor: pointer;
+              .overview {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h4 {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* Section : Elary-Bird */
+.early-bird {
+  .early-bird-inner {
+    .early-bird-content {
+      .countdown-wrap {
+        width: 100%;
+        margin-bottom: 20px;
+        .early-bird-info {
+          font-size: 12px;
+        }
+      }
+      .early-bird-banner {
+        padding: 20px;
+        .banner-about {
+          h1 {
+            font-size: 18px;
+          }
+          .hash-tag {
+            font-size: 18px;
+          }
+        }
+        .banner-thum {
+          display: none;
+        }
+      }
+    }
+  }
+}
+/*############ The Final Countdown Custome CSS ############*/
+#early-bird-countdown {
+  font-size: 20px;
+}
+  /* Section : blog */
+  .blog {
+    .blog-inner {
+      .blog-content {
+        .blog-items {
+          flex-direction: column;
+          .blog-item {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+  /* Section : Slogan */
+  .slogan {
+    .slogan-inner {
+      padding: 0 10px;
+    }
+  }
+/* Section : Tip Tech */
+.tip-tech {
+  .tip-tech-inner {
+    .tip-tech-content {
+      .tip-tech-wrap {
+        .tip-tech-items {
+          flex-direction: column;
+          gap: 0;
+        }
+      }
+    }
+  }
+}
+/*############ Category Main : category-main.html ############*/
+.category-class {
+  .category-inner {
+    .category-class-detail {
+      .category-shortcut-btn-group {
+        .btn-shortcut {
+          font-size: 12px;
+          margin-right: 3px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .category-class-wrap {
+      overflow-x: hidden;
+    }
+  }
+}
+/*############ Take Course & Cart : take-course.html ############*/
+section.take-course {
+  padding: 0;
+  .take-course-inner {
+    gap: 0px;
+    flex-direction: column;
+    >div {
+      border-radius: 0;
+      box-shadow: none;
+      padding: 15px;
+    }
+    .cart-wrap {
+      background-color: $white;
+      padding: 20px 10px;
+      @at-root .payment-headline {
+      }
+      .cart-items {
+        .cart-item {
+          .cart-overview {
+            .cart-overview-detail {
+              flex-direction: column;
+              .cart-overview-price {
+                text-align: left;
+                div {
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .payment {
+      border-top: 1px dashed #dddddd;
+      .mobile-confirm-wrap {
+        >div {
+          gap: 10px;
+          input[type=tel] {
+            flex: 3;
+          }
+        }
+      }
+      .payment-method-wrap {
+        >div {
+          label {
+            cursor: pointer;
+          }
+        }
+      }
+      .btn-payment-final {
+        background-color: $orangered;
+        border: none;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        color: $white;
+      }
+    }
+  }
+}
+}

@@ -1,0 +1,125 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 500;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  border: none;
+}
+
+/* setting Variables : Font Family */
+/* setting Varialbes : Text Color */
+/*  Setting Variables : Object Color*/
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* ############### Common CSS ############### */
+  section:not(.front-slider) {
+    padding: 35px 10px;
+  }
+  [class*=inner] {
+    width: 100%;
+  }
+  .front-header h2 {
+    font-size: 15px;
+  }
+  .front-header a {
+    font-size: 12px;
+  }
+  header .header-inner {
+    padding: 0 10px;
+  }
+  .search,
+  .search-mobile {
+    width: 300px;
+  }
+  header .mega-navi .mega-navi-inner {
+    padding: 20px 10px;
+  }
+  /* Section : Front Slider */
+  .front-slider .front-slider-items .front-slider-item {
+    cursor: pointer;
+  }
+  .front-slider .front-slider-items .front-slider-item .front-slider-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 400px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px;
+  }
+  .front-slider .front-slider-items .front-slider-item .front-slider-inner .desc {
+    font-family: "SpoqaHanSansNeo-Regular";
+  }
+  .front-slider .front-slider-items .front-slider-item .front-slider-inner .desc b {
+    font-size: 16px;
+    font-weight: normal;
+    color: #ED2040;
+  }
+  .front-slider .front-slider-items .front-slider-item .front-slider-inner .desc h1 {
+    font-size: 25px;
+    margin: 15px 0;
+  }
+  .front-slider .front-slider-items .front-slider-item .front-slider-inner .desc span {
+    font-size: 15px;
+  }
+  .front-slider .front-slider-items .front-slider-item .front-slider-inner .pic img {
+    height: 300px;
+  }
+  .best-class .best-class-inner .best-class-content .best-class-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .best-class .best-class-inner .best-class-content .best-class-wrap .invite-banner {
+    display: none;
+  }
+  .best-class .best-class-inner .best-class-content .best-class-wrap .invite-banner-tablet {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #f7d7cf;
+  }
+  .blog .blog-inner .blog-content .blog-items .blog-item .thum {
+    height: 150px;
+  }
+  footer {
+    padding: 20px;
+  }
+  footer .footer-inner .copyright-wrap address {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+  footer .footer-inner .copyright-wrap .sns a .bi {
+    font-size: 13px;
+  }
+}

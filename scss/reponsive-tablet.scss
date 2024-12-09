@@ -1,0 +1,123 @@
+//Import Loacla SCSS Files
+@import "reset.scss", "variables", "fonts";
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* ############### Common CSS ############### */
+  section:not(.front-slider) {
+    padding: 35px 10px;
+  }
+  [class*=inner] {
+    width: 100%;
+  }
+  .front-header {
+    h2 {
+      font-size: 15px;
+    }
+    a {
+      font-size: 12px;
+    }
+  }
+  // header
+  header {
+    .header-inner {
+      padding: 0 10px;
+      .logo-search {
+        }
+        @at-root .search,
+        .search-mobile
+         {
+          width: 300px;
+         }
+      }
+      .mega-navi {
+        .mega-navi-inner {
+          padding: 20px 10px;
+        }
+      }
+    }
+/* Section : Front Slider */
+.front-slider {
+  // margin-top: 130px;
+  .front-slider-items {
+    .front-slider-item {
+      cursor: pointer;
+      .front-slider-inner {
+        display: flex;
+        height: 400px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        .desc {
+          font-family: $secondary-kr;
+          b {
+            font-size: 16px;
+            font-weight: normal;
+            color: $crimson;
+          }
+          h1 {
+            font-size: 25px;
+            margin: 15px 0;
+          }
+          span {
+            font-size: 15px;
+          }
+        }
+        .pic {
+          img {
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+  // best class
+  .best-class {
+    .best-class-inner {
+      .best-class-content {
+        .best-class-wrap {
+          flex-direction: column-reverse;
+          .invite-banner {
+            display: none;
+          }
+          .invite-banner-tablet {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: #f7d7cf;
+          }
+        }
+      }
+    }
+  }
+  // blog
+  .blog {
+    .blog-inner {
+      .blog-content {
+        .blog-items {
+          .blog-item {
+            .thum {
+              height: 150px;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    padding: 20px;
+    .footer-inner {
+    .copyright-wrap {
+      address {
+        flex: 2;
+      }
+      .sns {
+        a {
+          .bi {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+  }
+}
